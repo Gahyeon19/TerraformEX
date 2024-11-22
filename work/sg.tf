@@ -52,7 +52,7 @@ resource "aws_security_group_rule" "sample-sg-elb-inbound" {
 
 resource "aws_security_group_rule" "sample-sg-elb-inbound2" {
   security_group_id = aws_security_group.sample-sg-elb.id
-  type = "ingress"
+  type = "ingress"  #인바운드
   description = "allow all for ssh"
   from_port = 22 
   to_port = 22 
@@ -62,7 +62,7 @@ resource "aws_security_group_rule" "sample-sg-elb-inbound2" {
 
 resource "aws_security_group_rule" "sample-sg-elb-egress" {
   security_group_id = aws_security_group.sample-sg-elb.id
-  type = "egress"
+  type = "egress"   #아웃바운드
   description = "allow all for all outbound"
   from_port = 0 
   to_port = 0 
